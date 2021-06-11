@@ -1,0 +1,5 @@
+```shell
+az network public-ip list -g gl_vas --query [].name 
+```
+
+# Will list the names of the public ip. Name is queried through jmespath. Dictionary
