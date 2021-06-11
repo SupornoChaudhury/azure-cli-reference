@@ -1,5 +1,6 @@
 # create public ip
-az network public-ip create --resource-group {{resource-group-name}} --name {{public-ip-name}} --allocation-method {{Static, Dynamic}} --sku {{Standard}}
+az network public-ip create --resource-group {{resource-group-name}} --name {{public-ip-name}} --allocation-method {{Static, Dynamic}} --sku {{Standard}} --zone {{1,2,3}}
+# zones refer to availability zones
 
 # create nic
 az network nic create --resource-group {{resource-group-name}} --name {{nic-name}} --vnet-name {{vnet-name}} --subnet {{subnet-name}} --public-ip-address {{public-ip-name}}
